@@ -2,7 +2,7 @@ const rwClient = require("./twitterClient.js");
 const CronJob = require("cron").CronJob;
 const { formatDistanceStrict } = require('date-fns')
 
-const calcDaysUntil = () => formatDistanceStrict(new Date(), new Date('January 1, 2023 12:00:00'), { unit: "second" });
+const calcDaysUntil = () => formatDistanceStrict(new Date(), new Date('January 1, 2023 12:00:00'), { unit: "day" });
 const getDay = (day) => day.replace(/\D/g, "")
 
 const tweet = async () => {
